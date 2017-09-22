@@ -1,0 +1,5 @@
+$rem-base: 27;// or 720
+$Response:true;
+@import "./scss/mobile-mixin";
+
+// @include rem-sprites("cur/*.png",$pre-name:A,$spacing:4px,$line-image:true);

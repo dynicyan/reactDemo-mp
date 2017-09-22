@@ -1,0 +1,28 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//import indexComponent from '../containers/index/index.component';
+
+var routeConfig = [{
+    path: '/',
+    //component: indexComponent,
+    onEnter: function onEnter(nextState, replaceState) {
+        //console.log('onEnter', nextState)
+        var pathName = nextState.location.pathname.replace(/^\//, '');
+        if (pathName == '') {
+            replaceState('index');
+        }
+    },
+    childRoutes: [{
+        path: 'index',
+        getComponents: function getComponents(location, callback) {
+            require.ensure([], function (require) {
+                callback(null, require('../index/index.component').default);
+            });
+        }
+    }]
+}];
+
+exports.default = routeConfig;

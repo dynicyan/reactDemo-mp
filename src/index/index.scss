@@ -1,0 +1,146 @@
+// 说明此文件引入了所有moblie的mixin
+// 其中reset,Response模块可以通过全局变量关闭和开启
+// 例如:
+  // $reset:true;
+//   $Response:false;
+// 其他模块默认全部引入，没有开关功能
+// @import "mobile-mixin/reset";
+$rem-base: 27;
+$imgSrc: (net,'../assets/networking.svg'),(laptop,'../assets/laptop.svg'),(mbag,'../assets/money-bag.svg'),(present,'../assets/presentation.svg');
+@import "../scss/mobile-mixin/rem-calc";
+// @import "../scss/mobile-mixin";
+// @import "mobile-mixin/rem-sprites";
+body{
+	background-image: linear-gradient(to top, #eeeeee, #f9f9f9);
+}
+.mp-wrapper{
+	width: 100%;
+    &:after{
+    	content: '';
+		position: absolute;
+		width: rem-calc(242);
+		height: rem-calc(356);
+		right: 0;
+		top: rem-calc(42);
+		background: url("../assets/combined-shape.svg");
+		background-size: 100% 100%;
+    }
+    &:before{
+		content: '';
+		position: absolute;
+		width: rem-calc(256);
+		height: rem-calc(256);
+		left: rem-calc(-48);
+		top: rem-calc(-80);
+		border-radius: 100%;
+		background-image: linear-gradient(to top, #f0f0f0, #f5f5f5)
+    }
+    .mp-logo{
+    	width: rem-calc(206);
+	    height: rem-calc(64);
+	    margin: rem-calc(48) auto 0;
+	    img{
+	    	width: 100%;
+	      	height: auto
+	    }
+    }
+    .mp-pic{
+    	width: rem-calc(364);
+	    height: rem-calc(244);
+	    margin: rem-calc(80) auto 0;
+	    position: relative;
+	    &:before{
+			content: '';
+			position: absolute;
+			width: rem-calc(112);
+			height: rem-calc(112);
+			border-radius: 100%;
+			left: rem-calc(-152);
+			bottom: rem-calc(-40);
+			background-image: linear-gradient(to top, #fff, rgba(255,255,255, 0.4), rgba(255,255,255, 0.2))
+		}
+	    img{
+	    	width: 100%;
+	      	height: auto
+	    }
+    }
+    .mp-subtitle{
+    	text-align: center;
+	    margin-top: rem-calc(44);
+	    span{
+	    	display: inline-block;
+	      	color: #888;
+	      	font-size: rem-calc(24);
+	      	line-height: rem-calc(32);
+	      	font-weight: normal;
+	      	position: relative;
+			&:before,
+			&:after{
+				content: '';
+				position: absolute;
+				width: rem-calc(80);
+				height: rem-calc(3);
+				top: rem-calc(15);
+				background-color: #e1e1e1
+			}
+			&:before{
+				left: rem-calc(-96)
+			}
+			&:after{
+				right: rem-calc(-96)
+			}
+	    }
+	    .subdet{
+	    	color: #888;
+			margin-top: rem-calc(12);
+			line-height: rem-calc(48);
+			font-size: rem-calc(32);
+			strong{
+				color: #23232b;
+				margin-left: rem-calc(8)
+			}
+	    }
+    }
+    .mp-info{
+		width: 100%;
+		ul{
+			width: 100%;
+			clear: both;
+			margin-top: rem-calc(80);
+			li{
+				width: rem-calc(374);
+				padding: 0 rem-calc(64) 0 rem-calc(208);
+				height: rem-calc(248);
+				margin: 0 auto rem-calc(32);
+				border-radius: rem-calc(6);
+				background-color: #fff;
+				position: relative;
+				display: table;
+				.mp-Cnt{
+					display: table-cell;
+					vertical-align: middle}
+				.mp-infoS{
+					font-size: rem-calc(26);
+					color: #999}
+				.mp-infoTitle{
+					line-height: rem-calc(64);
+				  	font-size: rem-calc(40);
+				  	color: #23232b}
+				i{
+					display: inline-block;
+					width: rem-calc(96);
+					height: rem-calc(96);
+					position: absolute;
+					left: rem-calc(64);
+					top: rem-calc(76)
+				}
+				@each $name, $src in $imgSrc {
+					.icon-#{$name} {
+						background-image: url($src);
+					  	background-size: 100% 100%
+				  	}
+				}
+			}
+		}
+    }
+}

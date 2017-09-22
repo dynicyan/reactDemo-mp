@@ -1,0 +1,1 @@
+{"version":3,"sources":["src/config/config.js"],"names":["GLOBAL_API_DOMAIN"],"mappings":";;;;;AAAO,IAAMA,gDAAoB,oCAA1B,C,CAAkE","file":"config.js","sourceRoot":"/Users/yandong/Downloads/mpaireact","sourcesContent":["export const GLOBAL_API_DOMAIN = 'http://192.168.1.35:8080/kxtx-mhyq';   //接口地址"]}

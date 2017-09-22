@@ -1,0 +1,156 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _class;
+
+// import indexState from './index.state';
+
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _mobxReact = require('mobx-react');
+
+require('./index.scss');
+
+var _axios = require('axios');
+
+var _axios2 = _interopRequireDefault(_axios);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Index = (0, _mobxReact.observer)(_class = function (_React$Component) {
+    (0, _inherits3.default)(Index, _React$Component);
+
+    function Index(props) {
+        (0, _classCallCheck3.default)(this, Index);
+
+        var _this = (0, _possibleConstructorReturn3.default)(this, (Index.__proto__ || (0, _getPrototypeOf2.default)(Index)).call(this, props));
+
+        _this.state = {
+            list: [{
+                name: 'net',
+                title: '发布管理',
+                info: '重构视频长传体系 降低发布成本 提高推荐效率'
+            }, {
+                name: 'laptop',
+                title: '流量倾斜',
+                info: '秒拍+微博双平台流量扶持 优质内容瞬间引爆'
+            }, {
+                name: 'mbag',
+                title: '商业支持',
+                info: '广告分成内容植入 流量变现 秒拍营销团队帮你赚钱'
+            }, {
+                name: 'present',
+                title: '数据管理 ',
+                info: '及时复盘数据 优化运营策略'
+            }]
+        };
+        return _this;
+    }
+
+    (0, _createClass3.default)(Index, [{
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            // axios.get('/loca/jj').then(function (data) {
+            //     console.log(data)
+            // })
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'mp-wrapper' },
+                _react2.default.createElement(
+                    'h1',
+                    { className: 'mp-logo' },
+                    _react2.default.createElement('img', { src: require('../assets/logo.svg') })
+                ),
+                _react2.default.createElement(
+                    'section',
+                    { className: 'mp-pic' },
+                    _react2.default.createElement('img', { src: require("../assets/group-9.svg") })
+                ),
+                _react2.default.createElement(
+                    'section',
+                    { className: 'mp-subtitle' },
+                    _react2.default.createElement(
+                        'span',
+                        null,
+                        '\u6B22\u8FCE\u5149\u4E34\uFF0C\u79D2\u62CD\u79FB\u52A8\u63D2\u4EF6\u5C0F\u5C4B\uFF0CPC\u7AEF\u63D2\u4EF6\u8BBF\u95EE'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        { className: 'subdet' },
+                        _react2.default.createElement(
+                            'strong',
+                            null,
+                            'https://github.com/dynicyan/mpaiment'
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    'section',
+                    { className: 'mp-info' },
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        this.state.list.map(function (item, index) {
+                            return _react2.default.createElement(
+                                'li',
+                                { key: index },
+                                _react2.default.createElement('i', { className: 'icon-' + item.name }),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'mp-Cnt' },
+                                    _react2.default.createElement(
+                                        'p',
+                                        { className: 'mp-infoTitle' },
+                                        ' ',
+                                        item.title,
+                                        ' '
+                                    ),
+                                    _react2.default.createElement(
+                                        'p',
+                                        { className: 'mp-infoS' },
+                                        ' ',
+                                        item.info,
+                                        ' '
+                                    )
+                                )
+                            );
+                        })
+                    )
+                )
+            );
+        }
+    }]);
+    return Index;
+}(_react2.default.Component)) || _class;
+
+exports.default = Index;

@@ -1,0 +1,1 @@
+export const GLOBAL_API_DOMAIN = 'http://192.168.1.35:8080/kxtx-mhyq';   //接口地址

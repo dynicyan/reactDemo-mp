@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="182" height="122" viewBox="0 0 182 122">
+    <defs>
+        <circle id="a" cx="7" cy="7" r="7"/>
+        <path id="c" d="M5.47 8C2.449 8 0 6.538 0 3.5V.002h5.47L182 0v3.498c0 3.038-2.449 4.5-5.47 4.5L5.47 8z"/>
+        <circle id="e" cx="24" cy="24" r="24"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g opacity=".3">
+            <rect width="28" height="57" fill="#23232B" rx="4.75"/>
+            <circle cx="14" cy="53.625" r="1.875" fill="#FFF" fill-opacity=".15"/>
+            <rect width="4.5" height="1" x="11.75" y="3" fill="#FFF" fill-opacity=".15" rx=".5"/>
+            <rect width="1" height="1" x="10" y="2.75" fill="#FFF" fill-opacity=".15" rx=".5"/>
+            <path fill="#FFF" d="M1.5 6.25h25v44.5h-25z"/>
+            <path fill="#EDEDED" d="M5 41h18v4H5z"/>
+            <path fill="#FFD600" d="M5 36h18v4H5z"/>
+            <g transform="translate(7 15)">
+                <mask id="b" fill="#fff">
+                    <use xlink:href="#a"/>
+                </mask>
+                <use fill="#BABABA" xlink:href="#a"/>
+                <path fill="#FFF" d="M2.713 9.723C3.994 8.908 5.423 8.5 7 8.5s3.006.408 4.287 1.223a1 1 0 0 1 .463.844V14h-9.5v-3.433a1 1 0 0 1 .463-.844z" mask="url(#b)"/>
+                <circle cx="7" cy="5" r="2.5" fill="#FFF" mask="url(#b)"/>
+            </g>
+        </g>
+        <g transform="translate(0 114)">
+            <mask id="d" fill="#fff">
+                <use xlink:href="#c"/>
+            </mask>
+            <use fill="#EDEDED" xlink:href="#c"/>
+            <path fill="#D1D1D1" d="M0 3.5h182V9H0z" mask="url(#d)"/>
+        </g>
+        <path fill="#23232B" d="M16 19.993A5.994 5.994 0 0 1 21.996 14h138.008A5.997 5.997 0 0 1 166 19.993V114H16V19.993z"/>
+        <path fill="#FFF" d="M22 21h138v86H22z"/>
+        <g>
+            <path fill="#FFD600" d="M31.5 34h24v12h-24z"/>
+            <path fill="#BABABA" d="M31.5 53.5h24V56h-24v-2.5zm0 5h24V61h-24v-2.5zm0 5h24V66h-24v-2.5zm0 5h24V71h-24v-2.5zm0 5h24V76h-24v-2.5zm0 5h11.765V81H31.5v-2.5z"/>
+            <path fill="#EDEDED" d="M71 93.5h18V99H71z"/>
+            <path fill="#FFD600" d="M93 93.5h18V99H93z"/>
+            <g transform="translate(67 33)">
+                <mask id="f" fill="#fff">
+                    <use xlink:href="#e"/>
+                </mask>
+                <use fill="#EDEDED" xlink:href="#e"/>
+                <path fill="#FFF" d="M10.5 33.884C14.309 31.294 18.809 30 24 30s9.692 1.295 13.5 3.884c.938.638 1.5 1.7 1.5 2.835V48H9V36.719c0-1.136.562-2.197 1.5-2.835z" mask="url(#f)"/>
+                <circle cx="24" cy="17" r="9" fill="#FFF" mask="url(#f)"/>
+            </g>
+            <path fill="#232C3A" d="M135 75.938l1.375 11.382 2.63-2.489 2.148 3.72 1.694-.978-2.148-3.72 3.47-1.033z"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,34 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _axios = require('axios');
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _util = require('../helpers/util');
+
+var _util2 = _interopRequireDefault(_util);
+
+var _locallStorage = require('../helpers/locallStorage');
+
+var _locallStorage2 = _interopRequireDefault(_locallStorage);
+
+var _config = require('./config');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_axios2.default.defaults.baseURL = _config.GLOBAL_API_DOMAIN;
+_axios2.default.defaults.withCredentials = true;
+_axios2.default.defaults.headers = {
+  'Content-Type': 'application/json',
+  Token: _locallStorage2.default.getItem('openid'),
+  'Access-Control-Allow-Credentials': true
+
+  // if (Util.getLocalStorageInfo('KXTX_ACCESS_TOKEN')) {
+  //     axios.defaults.headers.common['Authorization'] = Util.getLocalStorageInfo('KXTX_ACCESS_TOKEN').accessToken
+  // }
+
+};exports.default = _axios2.default;
